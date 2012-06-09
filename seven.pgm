@@ -1,0 +1,32 @@
+
+// parameter transmission....
+
+boolean function test()
+
+integer x;
+integer y;
+integer z;
+integer tmp;
+
+integer function foo(integer x, integer y)
+
+integer cat;
+begin
+  x := x + 4;
+  y := y - 10;
+  foo := 0;
+end function;
+
+begin
+ x := 5;
+ y := 5;
+ z := 5;
+
+ tmp := foo(z,x);
+
+ tmp := putInt(x);
+ tmp := putInt(y);
+ tmp := putInt(z);
+ test := 1 < 1;
+
+end function

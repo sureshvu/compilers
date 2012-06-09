@@ -1,0 +1,19 @@
+
+// recursion
+
+boolean function test ()
+
+integer tmp;
+
+integer function factorial(integer n) 
+integer cat;
+begin
+  if n == 0 then factorial := 1; 
+  else factorial := factorial(n-1) * n;
+  end if;
+end function;
+
+begin
+  tmp := putInt(factorial(19));
+  test := 0 > 0 ;
+end function

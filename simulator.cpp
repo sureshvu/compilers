@@ -28,7 +28,6 @@ int main()
 
 	parsetree.parsefile();
 
-	parsetree.print_variables();
 	cout << "Back to main() " << endl;
 
 }

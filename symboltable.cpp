@@ -6,7 +6,7 @@
 // Description : Hashtable implementation for symbol table
 // Created on  : May 12, 2012
 //============================================================================
-//Test Comment added for git
+
 
 #include<iostream>
 using namespace std;
@@ -44,6 +44,13 @@ hashentry* hashentry::getnext()
 }
 
 /* ---------------------------------------------------------- */
+int hashentry::getmemory()
+{
+	return (memory_location);
+}
+
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
 void hashentry::setkey(int key)
 {
 
@@ -70,8 +77,15 @@ cout << "hashentry::setidentifier:		" << identifier.val_str << endl;
 void hashentry::setnext(hashentry* next)
 {
 	this -> next = next;
+
 }
 
+
+/* ---------------------------------------------------------- */
+void hashentry::setmemory(int memory)
+{
+	this -> memory_location = memory;
+}
 
 //============================================================================
 //============================================================================
@@ -110,6 +124,37 @@ int hashmap::get_datatype(int key)
 		 else
 		 {
 			 return entry-> getdatatype();
+		 }
+
+	 }
+
+}
+
+/* ---------------------------------------------------------- */
+
+int hashmap::get_memory(int key)
+{
+	int hash = key % TABLESIZE;
+	 if(table[hash] ==  0)
+	 {
+		 return -1;
+	 }
+
+	 else
+	 {
+		 hashentry* entry = table[hash];
+		 while((entry != 0) && (entry -> getkey() != key))
+		 {
+			 entry = entry-> getnext();
+		 }
+		 if(entry == 0)
+		 {
+			 return -1;
+		 }
+
+		 else
+		 {
+			 return entry-> getmemory();
 		 }
 
 	 }
@@ -158,6 +203,15 @@ hashmap* hashmap::get_next()
 }
 
 /* ---------------------------------------------------------- */
+
+
+hashmap* hashmap::get_previous()
+{
+	return(this -> previous);
+}
+
+
+/* ---------------------------------------------------------- */
 /* ---------------------------------------------------------- */
 
 void hashmap::set_scope(int scope)
@@ -204,6 +258,30 @@ cout << "hashmap::put_identifier()   " << identifier.val_str << endl;
 
 }
 
+
+/* ---------------------------------------------------------- */
+void hashmap::set_memory(int key,int memory)
+{
+	int hash = key % TABLESIZE;
+
+
+	hashentry* entry;
+	entry = table[hash];
+	while((entry -> getkey() != key) )
+	{
+		entry = entry -> getnext();
+	}
+
+	if(entry -> getkey() == key)
+	{
+		entry -> setmemory(memory);
+	}
+	else
+	{
+cout << " The entry for data was not found :: No memory assigned" << endl;
+	}
+}
+
 /* ---------------------------------------------------------- */
 
 void hashmap::set_next(hashmap* next)
@@ -212,6 +290,10 @@ void hashmap::set_next(hashmap* next)
 	this -> next = next;
 }
 
+void hashmap::set_previous(hashmap* previous)
+{
+	this -> previous = previous;
+}
 
 
 //============================================================================
@@ -249,12 +331,26 @@ int symboltable::get_scope()
  }
 
  /* ---------------------------------------------------------- */
+
+ int symboltable::get_location(int key)
+ {
+	 return(present_table -> get_memory(key));
+ }
+ /* ---------------------------------------------------------- */
  /* ---------------------------------------------------------- */
 
 void symboltable::set_scope(int new_scope)
 {
 
 	present_table -> set_scope(new_scope);
+}
+
+/* ---------------------------------------------------------- */
+
+void symboltable::set_location(int key, int location)
+{
+
+	present_table -> set_memory(key,location);
 }
 
 /* ---------------------------------------------------------- */
@@ -270,17 +366,32 @@ void symboltable::push_table()
 {
 	stackpointer++;
 
-	hashmap* new_table;
+	if(present_table -> get_previous() == NULL)
+	{
+			hashmap* new_table;
 
-	new_table = new hashmap;
+			new_table = new hashmap;
+			new_table -> set_next(present_table);
+			new_table -> set_previous(NULL);
 
-	new_table -> set_next(present_table);
-	new_table -> set_scope(stackpointer);
+			present_table -> set_previous(new_table);
 
-	present_table = new_table;
+			new_table -> set_scope(stackpointer);
+
+			present_table = new_table;
 
 
-cout<<"New # table inserted in stack with position  " << stackpointer << endl;
+	cout<<"New # table inserted in stack with position  " << stackpointer << endl;
+
+	}
+
+	else
+	{
+
+		present_table= present_table->get_previous();
+
+	}
+
 
 }
 
@@ -288,26 +399,28 @@ cout<<"New # table inserted in stack with position  " << stackpointer << endl;
 
 void symboltable::pop_table()
 {
+
+
 	stackpointer--;
-	hashmap* temp_table;
 
-	if(stackpointer == -1)
-	{
-		cout << "Stack is empty" << endl;
-	}
+		present_scope = present_table->get_scope();
+		present_scope--;
 
-	else
-	{
-		temp_table = new hashmap;
-		temp_table = present_table -> get_next();
+		if(present_scope == -1)
+		{
+			cout << "Stack is empty" << endl;
+		}
 
+		else
+		{
+			present_table = present_table -> get_next();
 
-
-		present_table = temp_table;
-	}
+		}
 
 
-cout << "Top table is:  " << stackpointer << endl;
+	cout << "Top table is:  " << stackpointer << endl;
+
+
 
 }
 

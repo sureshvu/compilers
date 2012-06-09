@@ -79,6 +79,11 @@ public:
 	int hashfunction(token_unit);
 	void print_variables();
 
+	// General Parser functions for typechecking
+	void typecheck();
+	void update_datatype();
+
+
 	~parser();
 
 
@@ -98,11 +103,24 @@ private:
 
 
 
+
+
 	};
 
 	/* structure to hold main data */
 	token_unit main;
 	int main_type;
+
+	// Data type storage units
+	int current_type;
+	int function_type;
+	int factor_type;
+	bool argument_flag;
+
+	bool global_flag;
+
+	bool if_flag,for_flag;
+
 
 };
 

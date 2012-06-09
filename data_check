@@ -1,0 +1,585 @@
+Enter name of the input file: two.pgm
+The length of the file is: 583
+Buffer Filled 
+
+Token # 2token value string: boolean
+Welcome to function header 
+
+Token # 3token value string: function
+
+Token # 4token value string: test
+
+Token # 5token value char: (
+
+Token # 6token value char: )
+
+Token # 7token value string: string
+Welcome to function body 
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 8token value string: a
+Welcome to match populate
+Calculate key for 0
+Key 97
+hashentry::hashentry()  a
+hashmap::put_identifier()   a
+Populating table
+
+Token # 9token value char: ;
+Leaving match populate
+
+Token # 10token value string: integer
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 11token value string: b
+Welcome to match populate
+Calculate key for 0
+Key 98
+hashentry::hashentry()  b
+hashmap::put_identifier()   b
+Populating table
+
+Token # 12token value char: ;
+Leaving match populate
+
+Token # 13token value string: integer
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 14token value string: function
+
+Token # 15token value string: testone
+ Function declaration 2 gateway 
+Welcome to match populate
+Calculate key for 0
+Key 770
+hashentry::hashentry()  testone
+hashmap::put_identifier()   testone
+Populating table
+
+Token # 16token value char: (
+Leaving match populate
+New # table inserted in stack with position  1
+Pushing table 0
+Key 770
+hashentry::hashentry()  testone
+hashmap::put_identifier()   testone
+
+Token # 17token value string: string
+Welcome to parameterlist
+Welcome to variable declaration
+
+Token # 18token value string: testwe
+Welcome to match populate
+Calculate key for 0
+Key 0
+hashentry::hashentry()  testwe
+hashmap::put_identifier()   testwe
+Populating table
+
+Token # 19token value char: )
+Leaving match populate
+Leaving variable declaration
+Leaving  parameterlist
+
+Token # 20token value string: string
+Welcome to function body 
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 21token value string: c
+Welcome to match populate
+Calculate key for 0
+Key 99
+hashentry::hashentry()  c
+hashmap::put_identifier()   c
+Populating table
+
+Token # 22token value char: ;
+Leaving match populate
+
+Token # 23token value string: integer
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 24token value string: d
+Welcome to match populate
+Calculate key for 0
+Key 100
+hashentry::hashentry()  d
+Populating table
+
+Token # 25token value char: ;
+Leaving match populate
+
+Token # 26token value string: begin
+
+Token # 27token value string: c
+Welcome to parse assign 
+
+Token # 28token value char: :
+Hash about to be calculated
+Calculated hash is:  99With datatype:  118
+Current Data type is:  118
+
+Token # 29token value char: =
+
+Token # 30token value char: "
+Welcome to parsefactor
+String is:  In testone
+
+Token # 31token value char: "
+
+Token # 32token value char: ;
+   parser::typecheck()    Successful data type match in line:   9  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 33token value string: d
+
+Welcome to parse assign 
+
+Token # 34token value char: :
+Hash about to be calculated
+Calculated hash is:  100With datatype:  115
+Current Data type is:  115
+
+Token # 35token value char: =
+
+Token # 36token value string: putString
+Welcome to parsefactor
+
+Token # 37token value char: (
+Welcome to funciton call in factor 
+
+Token # 38token value string: testwe
+Welcome to argument list
+Welcome to parsefactor
+
+Token # 39token value char: )
+Type mismatch in   10   with tokentestwe   and testwe
+Welcome to term 2 
+
+Token # 40token value char: ;
+   parser::typecheck()    Successful data type match in line:   10  With current_type  -1  Factor_type    -1
+Welcome to term 2 
+
+Token # 41token value string: d
+Welcome to parse assign 
+
+Token # 42token value char: :
+Hash about to be calculated
+Calculated hash is:  100With datatype:  115
+Current Data type is:  115
+
+Token # 43token value char: =
+
+Token # 44token value string: putString
+Welcome to parsefactor
+
+Token # 45token value char: (
+Welcome to funciton call in factor 
+
+Token # 46token value string: c
+Welcome to argument list
+Welcome to parsefactor
+
+Token # 47token value char: )
+Type mismatch in   11   with tokenc   and c
+Welcome to term 2 
+
+Token # 48token value char: ;
+   parser::typecheck()    Successful data type match in line:   11  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 49token value string: testone
+Welcome to parse assign 
+
+Token # 50token value char: :
+Hash about to be calculated
+Calculated hash is:  770With datatype:  0
+Current Data type is:  0
+
+Token # 51token value char: =
+
+Token # 52token value int: 0
+Welcome to parsefactor
+
+Token # 53token value char: ;
+Type mismatch in   12   with tokentestone   and testone
+Welcome to term 2 
+
+Token # 54token value string: end
+
+Token # 55token value string: function
+
+Token # 56token value char: ;
+Top table is:  0
+
+Token # 57token value string: integer
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 58token value string: function
+
+Token # 59token value string: testtwo
+ Function declaration 2 gateway 
+Welcome to match populate
+Calculate key for 0
+Key 794
+hashentry::hashentry()  testtwo
+hashmap::put_identifier()   testtwo
+Populating table
+
+Token # 60token value char: (
+Leaving match populate
+New # table inserted in stack with position  1
+Pushing table 1
+Key 794
+hashentry::hashentry()  testtwo
+hashmap::put_identifier()   testtwo
+
+Token # 61token value string: string
+Welcome to parameterlist
+Welcome to variable declaration
+
+Token # 62token value string: testme
+Welcome to match populate
+Calculate key for 0
+Key 0
+hashentry::hashentry()  testme
+hashmap::put_identifier()   testme
+Populating table
+
+Token # 63token value char: )
+Leaving match populate
+Leaving variable declaration
+Leaving  parameterlist
+
+Token # 64token value string: integer
+Welcome to function body 
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 65token value string: e
+Welcome to match populate
+Calculate key for 0
+Key 101
+hashentry::hashentry()  e
+hashmap::put_identifier()   e
+Populating table
+
+Token # 66token value char: ;
+Leaving match populate
+
+Token # 67token value string: string
+Declaration phase :)
+Welcome to parse declaration
+
+Token # 68token value string: f
+Welcome to match populate
+Calculate key for 0
+Key 102
+hashentry::hashentry()  f
+hashmap::put_identifier()   f
+Populating table
+
+Token # 69token value char: ;
+Leaving match populate
+
+Token # 70token value string: begin
+
+Token # 71token value string: f
+Welcome to parse assign 
+
+Token # 72token value char: :
+Hash about to be calculated
+Calculated hash is:  102With datatype:  118
+Current Data type is:  118
+
+Token # 73token value char: =
+
+Token # 74token value char: "
+Welcome to parsefactor
+String is:  This is made in testtwo
+
+Token # 75token value char: "
+
+Token # 76token value char: ;
+   parser::typecheck()    Successful data type match in line:   20  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 77token value string: e
+Welcome to parse assign 
+
+Token # 78token value char: :
+Hash about to be calculated
+Calculated hash is:  101With datatype:  115
+Current Data type is:  115
+
+Token # 79token value char: =
+
+Token # 80token value string: putInt
+Welcome to parsefactor
+
+Token # 81token value char: (
+Welcome to funciton call in factor 
+
+Token # 82token value string: e
+Welcome to argument list
+Welcome to parsefactor
+
+Token # 83token value char: )
+   parser::typecheck()    Successful data type match in line:   21  With current_type  115  Factor_type    115
+Welcome to term 2 
+
+Token # 84token value char: ;
+   parser::typecheck()    Successful data type match in line:   21  With current_type  115  Factor_type    115
+Welcome to term 2 
+
+Token # 85token value string: e
+Welcome to parse assign 
+
+Token # 86token value char: :
+Hash about to be calculated
+Calculated hash is:  101With datatype:  115
+Current Data type is:  115
+
+Token # 87token value char: =
+
+Token # 88token value string: putString
+Welcome to parsefactor
+
+Token # 89token value char: (
+Welcome to funciton call in factor 
+
+Token # 90token value string: testme
+Welcome to argument list
+Welcome to parsefactor
+
+Token # 91token value char: )
+Type mismatch in   22   with tokentestme   and testme
+Welcome to term 2 
+
+Token # 92token value char: ;
+   parser::typecheck()    Successful data type match in line:   22  With current_type  -1  Factor_type    -1
+Welcome to term 2 
+
+Token # 93token value string: f
+Welcome to parse assign 
+
+Token # 94token value char: :
+Hash about to be calculated
+Calculated hash is:  102With datatype:  118
+Current Data type is:  118
+
+Token # 95token value char: =
+
+Token # 96token value char: "
+Welcome to parsefactor
+String is:  This is in testtwo
+
+Token # 97token value char: "
+
+Token # 98token value char: ;
+   parser::typecheck()    Successful data type match in line:   23  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 99token value string: e
+Welcome to parse assign 
+
+Token # 100token value char: :
+Hash about to be calculated
+Calculated hash is:  101With datatype:  115
+Current Data type is:  115
+
+Token # 101token value char: =
+
+Token # 102token value string: putString
+Welcome to parsefactor
+
+Token # 103token value char: (
+Welcome to funciton call in factor 
+
+Token # 104token value string: f
+Welcome to argument list
+Welcome to parsefactor
+
+Token # 105token value char: )
+Type mismatch in   24   with tokenf   and f
+Welcome to term 2 
+
+Token # 106token value char: ;
+   parser::typecheck()    Successful data type match in line:   24  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 107token value string: testtwo
+Welcome to parse assign 
+
+Token # 108token value char: :
+Hash about to be calculated
+Calculated hash is:  794With datatype:  0
+Current Data type is:  0
+
+Token # 109token value char: =
+
+Token # 110token value int: 10
+Welcome to parsefactor
+
+Token # 111token value char: ;
+Type mismatch in   25   with tokentesttwo   and testtwo
+Welcome to term 2 
+
+Token # 112token value string: end
+
+Token # 113token value string: function
+
+Token # 114token value char: ;
+Top table is:  0
+
+Token # 115token value string: begin
+
+Token # 116token value string: a
+Welcome to parse assign 
+
+Token # 117token value char: :
+Hash about to be calculated
+Calculated hash is:  97With datatype:  118
+Current Data type is:  118
+
+Token # 118token value char: =
+
+Token # 119token value char: "
+Welcome to parsefactor
+String is:  Made in main function
+
+Token # 120token value char: "
+
+Token # 121token value char: ;
+   parser::typecheck()    Successful data type match in line:   28  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 122token value string: b
+Welcome to parse assign 
+
+Token # 123token value char: :
+Hash about to be calculated
+Calculated hash is:  98With datatype:  115
+Current Data type is:  115
+
+Token # 124token value char: =
+
+Token # 125token value string: testone
+Welcome to parsefactor
+
+Token # 126token value char: (
+Welcome to funciton call in factor 
+
+Token # 127token value char: "
+Welcome to argument list
+Welcome to parsefactor
+String is:  TestMe
+
+Token # 128token value char: "
+
+Token # 129token value char: )
+Type mismatch in   29   with tokenTestMe   and TestMe
+Welcome to term 2 
+
+Token # 130token value char: ;
+   parser::typecheck()    Successful data type match in line:   29  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 131token value string: b
+Welcome to parse assign 
+
+Token # 132token value char: :
+Hash about to be calculated
+Calculated hash is:  98With datatype:  115
+Current Data type is:  115
+
+Token # 133token value char: =
+
+Token # 134token value string: testtwo
+Welcome to parsefactor
+
+Token # 135token value char: (
+Welcome to funciton call in factor 
+
+Token # 136token value string: a
+Welcome to argument list
+Welcome to parsefactor
+
+Token # 137token value char: )
+Type mismatch in   30   with tokena   and a
+Welcome to term 2 
+
+Token # 138token value char: ;
+   parser::typecheck()    Successful data type match in line:   30  With current_type  118  Factor_type    118
+Welcome to term 2 
+
+Token # 139token value string: b
+Welcome to parse assign 
+
+Token # 140token value char: :
+Hash about to be calculated
+Calculated hash is:  98With datatype:  115
+Current Data type is:  115
+
+Token # 141token value char: =
+
+Token # 142token value string: putInt
+Welcome to parsefactor
+
+Token # 143token value char: (
+Welcome to funciton call in factor 
+
+Token # 144token value string: b
+Welcome to argument list
+Welcome to parsefactor
+
+Token # 145token value char: )
+   parser::typecheck()    Successful data type match in line:   31  With current_type  115  Factor_type    115
+Welcome to term 2 
+
+Token # 146token value char: ;
+   parser::typecheck()    Successful data type match in line:   31  With current_type  115  Factor_type    115
+Welcome to term 2 
+
+Token # 147token value string: test
+Welcome to parse assign 
+
+Token # 148token value char: :
+Hash about to be calculated
+Calculated hash is:  448With datatype:  -1
+Current Data type is:  -1
+
+Token # 149token value char: =
+
+Token # 150token value int: 0
+Welcome to parsefactor
+
+Token # 151token value string: ==
+Type mismatch in   32   with token==   and test
+Welcome to term 2 
+
+Token # 152token value int: 0
+Welcome to parsefactor
+
+Token # 153token value char: ;
+   parser::typecheck()    Successful data type match in line:   32  With current_type  1  Factor_type    1
+Welcome to term 2 
+
+Token # 154token value string: end
+
+Token # 155token value string: function
+
+EOF token: ^
+Token # 156token value char: ^
+Stack is empty
+Top table is:  -1
+END OF FILE :) 
+Back to main() 
+ End of parse operations for main function test   With return type:	117
+Destructor for tokenizer <<

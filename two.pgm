@@ -1,0 +1,33 @@
+
+boolean function test ()
+string a;				
+integer b;
+integer function testone(string testwe) 
+string c;				
+integer d;
+begin
+	c := "In testone";
+	d := putString(testwe);	
+	d := putString(c);
+	testone := 0 ;
+end function;
+
+
+integer function testtwo(string testme) 
+integer e;
+string f;
+begin
+	f := "This is made in testtwo";
+	e := putInt(e);
+	e := putString(testme);
+	f := "This is in testtwo";
+	e := putString(f);
+	testtwo := 10;
+end function;
+begin
+	a := "Made in main function";
+	b := testone("TestMe");
+	b := testtwo(a);
+        b := putInt(b);
+        test := 0 == 0;
+end function

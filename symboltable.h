@@ -27,6 +27,8 @@ class hashentry
 
 		this->datatype = datatype;
 		this->identifier = identifier;
+
+		this -> memory_location = 5001;
 		this -> next = 0;
 
 cout<< "hashentry::hashentry()  " << identifier.val_str << endl;
@@ -36,11 +38,13 @@ cout<< "hashentry::hashentry()  " << identifier.val_str << endl;
 	token_unit getidentifier();
 	int getdatatype();
 	hashentry* getnext();
+	int getmemory();
 
 	void setkey(int);
 	void setdatatype(int);
 	void setidentifier(token_unit);
 	void setnext(hashentry*);
+	void setmemory(int);
 
 
 private:
@@ -48,6 +52,8 @@ private:
 	int key,datatype;
 	token_unit identifier;
 	hashentry* next;
+
+	int memory_location;
 
 };
 
@@ -84,15 +90,20 @@ public:
 	token_unit get_identifier(int);
 	int get_datatype(int);
 	hashmap* get_next();
+	hashmap* get_previous();
+	int get_memory(int);
 
 	void set_scope(int);
 	void put_identifier(int,int,token_unit);
 	void set_next(hashmap*);
+	void set_previous(hashmap*);
+	void set_memory(int,int);
 
 private:
 	hashentry** table;
 	int scope;
 	hashmap* next;
+	hashmap* previous;
 	token_unit present_token;
 
 };
@@ -113,9 +124,11 @@ public:
 	int get_scope();
 	token_unit get_identifier(int);
 	int get_datatype(int);
+	int get_location(int);
 
 	void set_scope(int);
 	void populate_table(int,int,token_unit);
+	void set_location(int,int);
 
 	void push_table();
 	void pop_table();
@@ -126,7 +139,7 @@ public:
 
 private:
 
-	int stackpointer;
+	int stackpointer,present_scope;
 	hashmap* present_table;
 
 };
